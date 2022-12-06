@@ -1,5 +1,5 @@
 # Anything with image for CTF checklist
-### This is a checklist is useful when encounter an image file in CTF
+### This checklist is useful when encounter an image file in CTF
 - Check the file type using `file <filename>`
 - Try open the file to see if it's corrupted or not
 - use exiftool to find flag in metadata `exiftool <filename> | grep -iE '{.*}'`. Install with `sudo apt install exiftool`
